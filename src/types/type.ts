@@ -1,4 +1,5 @@
 export interface ICamp {
+  id: number;
   name: string;
   type: string;
   status: string;
@@ -9,6 +10,7 @@ export interface ICamp {
 }
 
 export interface ICommunity {
+  id: number;
   tags: string[];
   title: string;
   content: string;
