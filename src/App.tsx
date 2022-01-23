@@ -1,17 +1,22 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Home, CampDetail, CampApply, Community, NotFound } from "pages";
+import GlobalStyled from "styles/global";
+
 const App = () => {
   return (
-    <BrowserRouter basename="/caffein">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/camp/apply" element={<CampApply />} />
-        <Route path="/camp/:id" element={<CampDetail />} />
-        <Route path="/community/" element={<Community />} />
-        <Route path="/*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <GlobalStyled />
+      <BrowserRouter basename="/caffein">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/camp/apply" element={<CampApply />} />
+          <Route path="/camp/:id" element={<CampDetail />} />
+          <Route path="/community/" element={<Community />} />
+          <Route path="/*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 };
 
