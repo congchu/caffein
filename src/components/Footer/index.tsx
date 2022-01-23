@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { maxWidth } from "styles/mixin";
 
 const Footer = () => {
   return (
@@ -12,6 +13,8 @@ const Footer = () => {
   );
 };
 
-const Container = styled.footer``;
+const Container = styled.footer`
+  ${maxWidth}
+`;
 
 export default Footer;
