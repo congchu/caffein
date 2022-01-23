@@ -45,6 +45,8 @@ const Home = () => {
         <div> All right reserved. 이용약관 개인정보처리방침</div>
       </footer>
     </div>
+
+      <HeaderSection />
   );
 };
 
