@@ -1,8 +1,8 @@
 import { createGlobalStyle } from "styled-components";
-import reset from "./reset";
+import "reset-css";
 
 export default createGlobalStyle`
-  ${reset}
+  
   a {
     text-decoration: none;
     color: inherit;
@@ -13,5 +13,8 @@ export default createGlobalStyle`
     letter-spacing: -0.5px;
     touch-action: pan-y;
     -webkit-font-smoothing: antialiased;
+  }
+  img{
+    width:100%;
   }
 `;
