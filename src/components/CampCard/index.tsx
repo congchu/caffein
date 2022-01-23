@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import dayjs from "dayjs";
 
 import { ICamp } from "types/type";
 import fonts from "styles/fonts";
@@ -18,7 +19,9 @@ const CampCard = ({ camp, isHeadField }: IProps) => {
             {isHeadField ? `${camp.field}/${camp.skill}` : camp.status}
           </div>
           <div className="camp-name">{camp.name}</div>
-          <div className="camp-start-date">{camp.startDate}</div>
+          <div className="camp-start-date">
+            {dayjs(camp.startDate).format("M월 DD일부터")}
+          </div>
         </div>
       </Container>
     </Link>
@@ -38,6 +41,7 @@ const Container = styled.div<{ bgImg: string }>`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin-bottom: 8px;
 
   .camp-content {
     padding: 20px;
