@@ -1,10 +1,13 @@
+import styled from "styled-components";
+
+import { Navigation, Footer } from "components";
+import { HeaderSection } from "./components/HeaderSection";
+import { CampSection } from "./components/CampSection";
+
 import { ICamp } from "types/type";
+import { useEffect, useState } from "react";
 
-import Navigation from "components/Navigation";
-import CampCard from "components/CampCard";
-
-// TODO: 실서버 데이터로 변경
-const camp: ICamp = {
+const campMock: ICamp = {
   id: 0,
   name: "업무 단순화 & 자동화로 엑셀을 실무에 더 적극 활용하기",
   type: "인기",
@@ -16,38 +19,32 @@ const camp: ICamp = {
 };
 
 const Home = () => {
+  const [popularCamps, setPopularCamps] = useState<ICamp[]>([]);
+  const [saleCamps, setSaleCamps] = useState<ICamp[]>([]);
+
+  useEffect(() => {
+    // TODO: 실서버 데이터로 변경
+    setPopularCamps([campMock, campMock, campMock, campMock]);
+    setSaleCamps([campMock, campMock, campMock, campMock]);
+  }, []);
+
   return (
-    <div>
+    <Container>
       <Navigation />
-      <section>
-        <div>인기 부트 캠프</div>
-        <div style={{ display: "flex", gap: "20px" }}>
-          <CampCard camp={camp} />
-          <CampCard camp={camp} />
-          <CampCard camp={camp} />
-          <CampCard camp={camp} />
-        </div>
-      </section>
-      <section>
-        <div>특가 할인 캠프</div>
-        <div style={{ display: "flex", gap: "20px" }}>
-          <CampCard camp={camp} />
-          <CampCard camp={camp} />
-          <CampCard camp={camp} />
-          <CampCard camp={camp} />
-        </div>
-      </section>
-      <footer>
-        <div>
-          대표: 내이름. 서울특별시 중구 한강대로 416, 서울스퀘어 15층 101호
-        </div>
-        <div> Copyright by (주)카페인.</div>
-        <div> All right reserved. 이용약관 개인정보처리방침</div>
-      </footer>
-    </div>
 
       <HeaderSection />
+
+      <CampSection title="인기 부트 캠프" camps={popularCamps} />
+
+      <CampSection title="특가 할인 캠프" camps={saleCamps} isHeadField />
+
+      <Footer />
+    </Container>
   );
 };
 
 export default Home;
+
+const Container = styled.div`
+  margin: 0 auto;
+`;
