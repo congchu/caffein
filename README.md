@@ -21,4 +21,4 @@ IT 관련 강의를 게시하고 수강 신청할 수 있는 플랫폼입니다.
 
 # Documentations
 
-- [과제 안내서(22.01.09~)](https://www.notion.so/cucus/PT-1-9-5f5f3561705e41448b48f7f4f3258e9d)
+- [주차별 과제 안내서(22.01.09~)](https://www.notion.so/cucus/PT-1-9-5f5f3561705e41448b48f7f4f3258e9d)
