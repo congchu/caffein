@@ -11,25 +11,8 @@ import {
 import { CampType, ICamp, ICommunity } from "types/type";
 import { useEffect, useState } from "react";
 import { maxWidth } from "styles/mixin";
-const communityMock: ICommunity = {
-  id: 0,
-  tags: ["야호", "정말"],
-  title: "합격 메일 답장 어떻게 할까요?",
-  content: "고칠 부분이 있는지 봐주시면 감사하겠습니다!",
-  comments: [
-    {
-      profile: "https://cdn.comento.kr/images/pt/tmp/prefix_44UsYDVNuM.jpg",
-      content: "와우",
-      nickname: "멘토1234",
-    },
-    {
-      profile: "https://cdn.comento.kr/images/pt/tmp/prefix_44UsYDVNuM.jpg",
-      content: "와우",
-      nickname: "멘토1234",
-    },
-  ],
-};
 import { getCampsByType } from "apis/campApi";
+import { getCommunties } from "apis/communityApi";
 
 const Home = () => {
   const [popularCamps, setPopularCamps] = useState<ICamp[]>([]);
@@ -39,12 +22,18 @@ const Home = () => {
   useEffect(() => {
     fetchCamps("popular");
     fetchCamps("sale");
+    fetchCommunities();
   }, []);
 
   const fetchCamps = async (type: CampType) => {
     const camps = await getCampsByType(type);
     type === "popular" ? setPopularCamps(camps) : setSaleCamps(camps);
   };
+  const fetchCommunities = async () => {
+    const communities = await getCommunties();
+    setCommunities(communities);
+  };
+
   return (
     <Container>
       <Navigation />
