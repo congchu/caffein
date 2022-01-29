@@ -1,7 +1,9 @@
-import axios, { AxiosError } from "axios";
+import axios from "axios";
+
+import { SERVER_URL } from "constants/env";
 
 const serverApi = axios.create({
-  baseURL: process.env.REACT_APP_SERVER_URL,
+  baseURL: SERVER_URL,
 });
 
 export const getCommunties = async () => {
