@@ -39,6 +39,9 @@ const Home = () => {
       <CampSection title="인기 부트 캠프" camps={popularCamps} />
 
       <CampSection title="특가 할인 캠프" camps={saleCamps} isHeadField />
+        <HomeBanner
+          text={`현직자와 소통하며 배우는\n실무 스킬, 퍼스널 트레이닝`}
+        />
 
       <Footer />
     </Container>
