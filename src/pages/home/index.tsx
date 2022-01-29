@@ -1,11 +1,7 @@
 import styled from "styled-components";
 
-import { Navigation, Footer } from "components";
 import { Navigation, Footer, Padding } from "components";
-import {
-  CampSection,
-  HeaderSection,
-} from "./components";
+import { CampSection, HeaderSection, HomeBanner } from "./components";
 
 import { ICamp } from "types/type";
 import { useEffect, useState } from "react";
