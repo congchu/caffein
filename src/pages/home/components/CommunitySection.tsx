@@ -1,4 +1,3 @@
-import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 
 import { ICommunity } from "types/type";
@@ -9,12 +8,9 @@ interface IProps {
   title: string;
   communities: ICommunity[];
 }
-const CommunitySection = ({ title, communities }: IProps) => {
-  const isDesktop = useMediaQuery({
-    query: "(min-width: 680px)",
-  });
 
-  return isDesktop ? (
+const CommunitySection = ({ title, communities }: IProps) => {
+  return (
     <Container>
       <div className="section-title">{title}</div>
       <div className="community-cards">
@@ -23,7 +19,7 @@ const CommunitySection = ({ title, communities }: IProps) => {
         ))}
       </div>
     </Container>
-  ) : null;
+  );
 };
 
 export default CommunitySection;
