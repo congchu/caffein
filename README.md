@@ -1,9 +1,9 @@
-# Caffein
-IT 관련 강의를 게시하고 수강 신청할 수 있는 플랫폼입니다.[(결과물 프로토타입)](https://www.figma.com/proto/pYBuhJKhKnV1GbhGf6sxBc/%EC%BD%94%EB%A9%98%ED%86%A0-%EC%A7%81%EB%AC%B4PT?page-id=2%3A562&node-id=2%3A571&viewport=328%2C48%2C0.12&scaling=scale-down&starting-point-node-id=2%3A571)
-
+# Overview
+`주니어 React 개발자를 위한 부트캠프 실습 자료입니다.`\
+Caffein은 IT 관련 강의를 게시하고 수강 신청할 수 있는 플랫폼입니다.\
+Demo는 [Demo 링크](https://congchu.github.io/caffein/)에서 확인할 수 있습니다.
 
 <br/>
-
 
 &nbsp;
 &nbsp;
