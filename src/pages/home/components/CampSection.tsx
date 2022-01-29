@@ -3,7 +3,6 @@ import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 
 import fonts from "styles/fonts";
-import { maxWidth } from "styles/mixin";
 import { ICamp } from "types/type";
 
 interface IProps {
@@ -28,11 +27,10 @@ const CampSection = ({ title, camps, isHeadField = false }: IProps) => {
   );
 };
 
-const Container = styled.section`
-  ${maxWidth}
 export default CampSection;
 
-  padding: 0px 16px 40px;
+const Container = styled.section`
+  padding: 0px 16px;
 
   .section-title {
     ${fonts.H1};
