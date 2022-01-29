@@ -1,9 +1,8 @@
 import axios, { AxiosError } from "axios";
 
-import { SERVER_URL } from "constants/env";
-
+// TODO: 환경 변수로 변경
 const serverApi = axios.create({
-  baseURL: SERVER_URL,
+  baseURL: "https://caffein-server.herokuapp.com/api",
 });
 
 serverApi.interceptors.response.use(
