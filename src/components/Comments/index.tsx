@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { IComment } from "types/type";
 import Comment from "./Comment";
 

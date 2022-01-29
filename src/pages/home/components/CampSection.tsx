@@ -1,5 +1,4 @@
 import { CampCard } from "components";
-import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 
 import fonts from "styles/fonts";

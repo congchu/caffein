@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useEffect, useState } from "react";
 
 import { Navigation, Footer, Padding, CardSectionSkeleton } from "components";
 import {
@@ -7,10 +8,9 @@ import {
   HeaderSection,
   CommunitySection,
 } from "./components";
-
 import { CampType, ICamp, ICommunity } from "types/type";
-import { useEffect, useState } from "react";
 import { maxWidth } from "styles/mixin";
+
 import { getCampsByType } from "apis/campApi";
 import { getCommunties } from "apis/communityApi";
 

@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-
 import { useMediaQuery } from "react-responsive";
 
 import { maxWidth } from "styles/mixin";
@@ -68,4 +67,3 @@ const Container = styled.header<{ bgImg: string; isMobile: boolean }>`
     height: ${(props) => (props.isMobile ? "150px" : "400px")};
   }
 `;
-

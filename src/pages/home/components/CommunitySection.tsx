@@ -2,9 +2,7 @@ import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 
 import { ICommunity } from "types/type";
-
 import { CommunityCard } from "components";
-
 import fonts from "styles/fonts";
 
 interface IProps {

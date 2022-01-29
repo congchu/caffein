@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { keyframes, css } from "styled-components";
+
 const skeletonAnimation = keyframes`
   0% {
     background-position: 100% 100%;
