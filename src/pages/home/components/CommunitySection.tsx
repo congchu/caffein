@@ -2,9 +2,7 @@ import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 
 import { ICommunity } from "types/type";
-
 import { CommunityCard } from "components";
-
 import fonts from "styles/fonts";
 
 interface IProps {
@@ -19,7 +17,7 @@ const CommunitySection = ({ title, communities }: IProps) => {
   return isDesktop ? (
     <Container>
       <div className="section-title">{title}</div>
-      <div className="cards">
+      <div className="community-cards">
         {communities.map((community, index) => (
           <CommunityCard key={index} community={community} />
         ))}
@@ -37,8 +35,11 @@ const Container = styled.div`
     ${fonts.H1};
     padding-bottom: 16px;
   }
-  .cards {
+  .community-cards {
     display: flex;
     gap: 20px;
+    a {
+      flex: 1;
+    }
   }
 `;

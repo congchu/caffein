@@ -1,5 +1,4 @@
 import { CampCard } from "components";
-import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 
 import fonts from "styles/fonts";
@@ -11,14 +10,10 @@ interface IProps {
   isHeadField?: boolean;
 }
 const CampSection = ({ title, camps, isHeadField = false }: IProps) => {
-  const isMobile = useMediaQuery({
-    query: "(max-width: 680px)",
-  });
-
   return (
     <Container>
       <div className="section-title">{title}</div>
-      <div className={`${isMobile ? "" : "flex"}`}>
+      <div className="camp-cards">
         {camps.map((camp, index) => (
           <CampCard key={index} camp={camp} isHeadField={isHeadField} />
         ))}
@@ -37,9 +32,14 @@ const Container = styled.section`
     padding-bottom: 8px;
   }
 
-  .flex {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
+  .camp-cards {
+    a {
+      flex: 1;
+    }
+    @media (min-width: 680px) {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+    }
   }
 `;
