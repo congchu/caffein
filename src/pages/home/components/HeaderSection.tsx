@@ -4,8 +4,8 @@ import { useMediaQuery } from "react-responsive";
 
 import { maxWidth } from "styles/mixin";
 
-export const HeaderSection = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 480px)" });
+const HeaderSection = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 680px)" });
 
   return (
     <Container
@@ -24,6 +24,7 @@ export const HeaderSection = () => {
     </Container>
   );
 };
+export default HeaderSection;
 
 const Container = styled.header<{ bgImg: string; isMobile: boolean }>`
   background-image: url(${(props) => props.bgImg});
