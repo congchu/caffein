@@ -11,7 +11,7 @@ interface IProps {
   camps: ICamp[];
   isHeadField?: boolean;
 }
-export const CampSection = ({ title, camps, isHeadField = false }: IProps) => {
+const CampSection = ({ title, camps, isHeadField = false }: IProps) => {
   const isMobile = useMediaQuery({
     query: "(max-width: 480px)",
   });
@@ -30,6 +30,7 @@ export const CampSection = ({ title, camps, isHeadField = false }: IProps) => {
 
 const Container = styled.section`
   ${maxWidth}
+export default CampSection;
 
   padding: 0px 16px 40px;
 
