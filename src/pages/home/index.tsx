@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 import { Navigation, Footer, Padding, CardSectionSkeleton } from "components";
 import {
@@ -18,6 +19,9 @@ const Home = () => {
   const [popularCamps, setPopularCamps] = useState<ICamp[]>();
   const [saleCamps, setSaleCamps] = useState<ICamp[]>();
   const [communities, setCommunities] = useState<ICommunity[]>();
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 680px)",
+  });
 
   useEffect(() => {
     fetchCamps("popular");
@@ -56,10 +60,15 @@ const Home = () => {
           text={`현직자와 소통하며 배우는\n실무 스킬, 퍼스널 트레이닝`}
         />
         <Padding height="55px" />
-        {communities ? (
-          <CommunitySection title="커뮤니티" communities={communities} />
-        ) : (
-          <CardSectionSkeleton />
+
+        {isDesktop && (
+          <>
+            {communities ? (
+              <CommunitySection title="커뮤니티" communities={communities} />
+            ) : (
+              <CardSectionSkeleton />
+            )}
+          </>
         )}
         <Padding height="240px" />
       </main>
