@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/caffein/static/css/main.cf506294.css",
+    "main.js": "/caffein/static/js/main.2713b67b.js",
+    "static/media/home_header_bg.jpg": "/caffein/static/media/home_header_bg.979a2d5a077be93c62fa.jpg",
+    "index.html": "/caffein/index.html",
+    "main.cf506294.css.map": "/caffein/static/css/main.cf506294.css.map",
+    "main.2713b67b.js.map": "/caffein/static/js/main.2713b67b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cf506294.css",
+    "static/js/main.2713b67b.js"
+  ]
+}
