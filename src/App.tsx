@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
       <GlobalStyled />
-      <BrowserRouter basename="/caffein">
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/camp/apply" element={<CampApply />} />
