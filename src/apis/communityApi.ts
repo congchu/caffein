@@ -2,7 +2,7 @@ import axios from "axios";
 
 // TODO: 환경 변수로 변경
 const serverApi = axios.create({
-  baseURL: "https://caffein-server.herokuapp.com/api",
+  baseURL: process.env.REACT_APP_SERVER_URL,
 });
 
 export const getCommunties = async () => {
