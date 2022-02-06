@@ -1,4 +1,5 @@
 import axios, { AxiosError } from "axios";
+import { CampType } from "types/type";
 
 // TODO: 환경 변수로 변경
 const serverApi = axios.create({
@@ -14,7 +15,7 @@ serverApi.interceptors.response.use(
   }
 );
 
-export const getCampsByType = async (type: string) => {
+export const getCampsByType = async (type: CampType) => {
   return await serverApi
     .get(`/camps?type=${type}`)
     .then((response) => response.data.data)
