@@ -33,7 +33,7 @@ const Navigation = () => {
             alt="로고"
           />
         </Link>
-        <Link to="/mypage">
+        <Link to="/community">
           <img
             className="ic-person"
             src={
