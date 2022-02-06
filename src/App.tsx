@@ -13,6 +13,7 @@ const App = () => {
           <Route path="/camp/apply" element={<CampApply />} />
           <Route path="/camp/:id" element={<CampDetail />} />
           <Route path="/community/" element={<Community />} />
+          <Route path="/camp/:campId" element={<CampDetail />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
