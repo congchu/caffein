@@ -2,7 +2,7 @@ export interface ICamp {
   id: number;
   name: string;
   type: string;
-  status: string;
+  status: "ready" | "open" | "completed";
   field: string;
   skill: string;
   startDate: string;
