@@ -18,7 +18,3 @@ IT 관련 강의를 게시하고 수강 신청할 수 있는 플랫폼입니다.
 |5주차|`상태관리`,`React Hooks`,`웹 스토리지`|✔️ React Hook을 활용한 상태관리  <br/>✔️ 웹 스토리지 적용|Milestone #5|
 
 <br/>
-
-# Documentations
-
-- [주차별 과제 안내서(22.01.09~)](https://www.notion.so/cucus/PT-1-9-5f5f3561705e41448b48f7f4f3258e9d)
