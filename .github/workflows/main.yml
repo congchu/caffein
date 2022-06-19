@@ -18,6 +18,7 @@ jobs:
       - name: Build app
         run: yarn build
         env:
+          CI : false
           REACT_APP_SERVER_URL: ${{ secrets.SERVER_URL }}
 
       - name: Deploy To s3
