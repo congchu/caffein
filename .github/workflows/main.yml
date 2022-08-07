@@ -2,7 +2,7 @@ name: React app deployement
 
 on:
   push:
-    branches: [ master,develop ]
+    branches: [ master ]
 
 jobs:
   deploy:
@@ -29,4 +29,4 @@ jobs:
           aws s3 cp \
             --recursive \
             --region ap-northeast-2 \
-            build s3://caffein-june
+            build s3://comento-caffein-production
