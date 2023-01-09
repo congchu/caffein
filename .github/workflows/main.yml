@@ -11,6 +11,7 @@ jobs:
     steps:
       - name: checkout v2
         uses: actions/checkout@v2
+        
       - name: Install Dependence
         run: yarn install
 
@@ -28,4 +29,4 @@ jobs:
           aws s3 cp \
             --recursive \
             --region ap-northeast-2 \
-            build s3://caffein.serendipist.com
+            build s3://dev.caffein.com
